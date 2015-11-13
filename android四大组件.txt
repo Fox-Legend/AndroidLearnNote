@@ -46,5 +46,12 @@ activity创建的窗口上，当activity指向全屏窗口时，activity是单独的，用于处理用户操
   
   
   
-  
+
+/***onCreate()***/
+(1),setContentView(R.layout.main);
+(2),LayoutInflater inflater = LayoutInflater from(this);
+  View view = inflater.inflate(R.layout.main);
+  setContentView(view);
+
+以上2者的区别为：(1)一旦调用，layout就会显示UI，而(2)只会把layout形成一个View类实现成的对象，有需要时才会再用setContentView(view)显示。
 
